@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Split Window</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        /* Left navigation panel */
+        .left-panel {
+            width: 25%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .left-panel a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+        }
+        .left-panel a:hover {
+            background-color: #ddd;
+        }
+        /* Right content panel */
+        .right-panel {
+            flex-grow: 1;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Left panel with navigation -->
+    <div class="left-panel">
+        <h3>Navigation</h3>
+        <a href="page1.html" target="content-frame">Page 1</a>
+        <a href="page2.html" target="content-frame">Page 2</a>
+        <a href="page3.html" target="content-frame">Page 3</a>
+    </div>
+
+    <!-- Right panel with iframe -->
+    <div class="right-panel">
+        <iframe name="content-frame" src="page1.html"></iframe>
+    </div>
+</body>
+</html>
